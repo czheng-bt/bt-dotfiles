@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 if ! command -v zsh >/dev/null 2>&1
 then
