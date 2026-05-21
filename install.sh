@@ -7,9 +7,10 @@ then
   sudo yum install zsh -y
 fi
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
-# Symlink .zshrc if it doesn't exist
 if [ ! -f "$HOME/.zshrc" ]; then
   ln -s "$SCRIPT_DIR/.zshrc" "$HOME/.zshrc"
 fi
