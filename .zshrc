@@ -26,3 +26,9 @@ plugins=(
 )
 
 source "${ZSH}/oh-my-zsh.sh"
+
+export EDITOR='vim'
+export GPG_TTY=$(tty)
+
+# Get directory of current script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
